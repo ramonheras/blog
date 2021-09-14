@@ -4,7 +4,7 @@ name: Build and deploy on commit
 on: 
   push:
     branches: 
-      - master
+      - main
 
 jobs:
   build:
@@ -12,6 +12,7 @@ jobs:
 
     env:
       API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      CNAME: 'ramonheras.com'
 
     steps:
       # Setup #
@@ -24,6 +25,8 @@ jobs:
       - name: Build 
         run: hugo -D
       - run: cd public && ls
+      - name: Create CNAME file to set custom domain on GitHub pages.
+        run: echo $CNAME > public/CNAME
       # Deploy # 
       - name: Push directory to another repository
         uses: cpina/github-action-push-to-another-repository@v1.3
