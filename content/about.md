@@ -8,7 +8,7 @@ cover: "/images/about/avatar.PNG"
 
 ## Hi
 
-I'm Ramón. As an engineer I love solving complex problems, especially if I play in a motivated team. I also enjoy learning new things, I'm not afraid of new technologies and challenges. I'm really picky and I prefer to take my time to find solutions that are reliable and maintainable in the long term. Watching YouTube videos is my favorite entertainment, especially gadget reviews and unboxings.
+My name is Ramón Heras. I'm an Software Engineer 👾 that loves solving complex problems, especially if as part of a motivated team 🙌. I also enjoy learning new things, I'm not afraid of new technologies and challenges. I'm quite picky and I prefer to take my time to find solutions that are reliable and maintainable in the long term, architecture design is fascinating, innit?. Watching YouTube videos is my favorite entertainment, mainly gadget reviews and unboxings 🤙. 
 
 
 
