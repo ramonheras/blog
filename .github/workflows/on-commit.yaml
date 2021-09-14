@@ -1,0 +1,35 @@
+
+name: Build and deploy on commit  
+
+on: 
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+
+    steps:
+      # Setup #
+      - name: Install Hugo
+        run: sudo apt-get install hugo
+      - uses: actions/checkout@v2
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+      # Build #
+      - name: Build 
+        run: hugo -D
+      - run: cd public && ls
+      # Deploy # 
+      - name: Push directory to another repository
+        uses: cpina/github-action-push-to-another-repository@v1.3
+        with:
+          source-directory: 'public'
+          destination-github-username: 'ramonheras'
+          destination-repository-name: 'ramonheras.github.io'
+          target-branch: deploy
+
