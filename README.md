@@ -1,5 +1,7 @@
 # My Blog 
 
+![Hugo](https://img.shields.io/badge/Hugo_Extended-v0.109.0-blue?style=flat-square&logo=Hugo)
+
 Hugo Blog using Terminal Theme deployed on GitHub Pages
 
 ## Development
