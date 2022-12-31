@@ -18,6 +18,8 @@ params:
   centerTheme: true
   
   enableEmoji: true
+  # Custom favicon
+  favicon: "/images/favicon/favicon.ico"
 
 languages:
   en:
