@@ -3,8 +3,7 @@
 ![Terminal](https://github.com/panr/hugo-theme-terminal/blob/master/images/screenshot.png?raw=true)
 
 ### DEMO - https://hugo-terminal.now.sh/
-
-<a href="https://www.buymeacoffee.com/panr" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
+### ⚠️ The theme needs at least Hugo **Extended** v0.90.x.
 
 ---
 
@@ -16,11 +15,10 @@
 - [How to configure](#how-to-configure)
 - [Post archetype](#post-archetype)
 - [Add-ons](#add-ons)
-- [How to (safely) edit the theme](#how-to-edit)
+- [How to edit the theme](#how-to-edit)
 - [Found a bug?](#bug)
 - [New cool idea or feature](#feature)
 - [Terminal theme user?](#terminal-theme-user)
-- [Sponsoring](#sponsoring)
 - [Licence](#licence)
 
 ## Features
@@ -29,15 +27,22 @@
 - [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
 - **really nice duotone**, custom syntax highlighting based on [**PrismJS**](https://prismjs.com)
 - fully responsive
+- fully based on Hugo ecosystem (Pipes and Modules)
 
 #### Built-in shortcodes
 
-- **`image`** (prop required: **`src`**; props optional: **`alt`**, **`position`** (**left** is default | center | right), **`style`**)
-  - eg: `{{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}`
+- **`image`** (props required: **`src`**; props optional: **`alt`**, **`position`** (**left** is default | center | right), **`style`**)
+  - e.g.
+  ```go
+  {{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
+  ```
 - **`figure`** (same as `image`, plus few optional props: **`caption`**, **`captionPosition`** (left | **center** is default | right), **`captionStyle`**)
-  - eg: `{{< figure src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" caption="Hello Friend!" captionPosition="right" captionStyle="color: red;" >}}`
-- **`code`** (prop required: **`language`**; props optional: **`title`**, **`id`**, **`expand`** (default "△"), **`collapse`** (default "▽"), **`isCollapsed`**)
-  - eg:
+  - e.g.
+  ```go
+  {{< figure src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" caption="Hello Friend!" captionPosition="right" captionStyle="color: red;" >}}
+  ```
+- **`code`** (props required: **`language`**; props optional: **`title`**, **`id`**, **`expand`** (default "△"), **`collapse`** (default "▽"), **`isCollapsed`**)
+  - e.g.
   ```go
   {{< code language="css" title="Really cool snippet" id="1" expand="Show" collapse="Hide" isCollapsed="true" >}}
   pre {
@@ -72,32 +77,71 @@ A custom syntax highlighting based on PrismJS. All you need to do is to wrap you
 ```
 ````
 
-**Supported languages**: actionscript, apacheconf, applescript, bash, c, clike, cmake, coffeescript, cpp, csharp, csp, css, css-extras, diff, django, docker, elixir, elm, erlang, flow, fsharp, git, go, graphql, haml, handlebars, haskell, http, java, javascript, json, jsx, kotlin, latex, less, llvm, makefile, markdown, markup, markup-templating, nasm, objectivec, ocaml, perl, php, php-extras, powershell, processing, pug, python, r, reason, ruby, rust, sass, scheme, scss, sql, stylus, swift, textile, toml, tsx, twig, typescript, vim, visual-basic, wasm, yaml.
+**Supported languages**: actionscript, apacheconf, applescript, bash, c, clike, cmake, coffeescript, cpp, csharp, csp, css, css-extras, diff, django, docker, elixir, elm, erlang, flow, fsharp, git, go, graphql, haml, handlebars, haskell, http, java, javascript, json, jsx, kotlin, latex, less, llvm, makefile, markdown, markup, markup-templating, nasm, objectivec, ocaml, perl, php, php-extras, powershell, processing, pug, python, r, reason, ruby, rust, sass, scala, scheme, scss, sql, stylus, swift, textile, toml, tsx, twig, typescript, vim, visual-basic, wasm, yaml.
 
 ## How to start
 
 You can download the theme manually by going to [https://github.com/panr/hugo-theme-terminal.git](https://github.com/panr/hugo-theme-terminal.git) and pasting it to `themes/terminal` in your root directory.
 
-You can also clone it directly to your Hugo folder:
+You can also choose **one of the 3 possibilities** to install the theme:
 
-```
-$ git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
+1. as Hugo Module
+2. as a standalone local directory
+3. as a git submodule
+
+⚠️ The theme needs at least Hugo **Extended** v0.90.x.
+
+### Install theme as Hugo Module
+
+```bash
+# If this is the first time you're using Hugo Modules
+# in your project. You have to initiate your own module before
+# you fetch the theme module.
+#
+# hugo mod init [your website/module name]
+hugo mod get github.com/panr/hugo-theme-terminal
 ```
 
-If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. You can also include it as a git submodule:
+and in your config file add:
 
-```
-$ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
+```toml
+[module]
+  # this is needed when you fetch the theme as a submodule to your repo.
+  # replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
+[[module.imports]]
+  path = 'github.com/panr/hugo-theme-terminal'
 ```
 
-⚠️ **The theme needs at least Hugo version 0.74.x**.
+Keep in mind that the theme by default won't show up in the `themes` directory. This means that you are using the theme as it was on the repository at the moment you fetched it. Your local `go.sum` file keeps all the references. Read more about Hugo Modules in the [official documentation](https://gohugo.io/hugo-modules/).
+
+### Install theme locally
+
+```bash
+git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
+```
+
+This will clone the repository directly to the `themes/terminal` directory.
+
+### Install theme as a submodule
+
+```bash
+git submodule add -f https://github.com/panr/hugo-theme-terminal.git themes/terminal
+```
+
+This will install the repository as a sumbodule in the `themes/terminal` directory.
+
+⚠️ If you encounter any issues with:
+
+```bash
+Error: module "terminal" not found; either add it as a Hugo Module or store it in "[...your custom path]/themes".: module does not exist
+```
+
+then please try to remove `theme = "terminal"` from your config file.
 
 ## How to run your site
 
-If you installed all needed `npm` dependencies, then you can run:
-
-```
-$ hugo server -t terminal
+```bash
+hugo server -t terminal
 ```
 
 and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
@@ -109,6 +153,8 @@ The theme doesn't require any advanced configuration. Just copy:
 ```toml
 baseurl = "/"
 languageCode = "en-us"
+# Add it only if you keep the theme in the `themes` directory.
+# Remove it if you use the theme as a remote Hugo Module.
 theme = "terminal"
 paginate = 5
 
@@ -132,18 +178,35 @@ paginate = 5
   # center theme with default width
   centerTheme = false
 
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
+  # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+  # then the file will be used as a cover automatically.
+  # With this option you don't have to put the `cover` param in a front-matter.
+  autoCover = true
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
   showLastUpdated = false
+
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
+
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
 
   # set all headings to their default size (depending on browser settings)
-  # it's set to `true` by default
-  # oneHeadingSize = false
+  # oneHeadingSize = true # default
+
+  # whether to show a page's estimated reading time
+  # readingTime = false # default
+
+  # whether to show a table of contents
+  # can be overridden in a page's front-matter
+  # Toc = false # default
+
+  # set title for the table of contents
+  # can be overridden in a page's front-matter
+  # TocTitle = "Table of Contents" # default
+
 
 [params.twitter]
   # set Twitter handles for Twitter cards
@@ -181,6 +244,14 @@ paginate = 5
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
+
+[module]
+  # In case you would like to make changes to the theme and keep it locally in you repository,
+  # uncomment the line below (and correct the local path if necessary).
+  # --
+  # replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
+[[module.imports]]
+  path = 'github.com/panr/hugo-theme-terminal'
 ```
 
 to `config.toml` file in your Hugo root directory and change params fields. In case you need, here's [a YAML version](https://gist.github.com/panr/9eeea6f595c257febdadc11763e3a6d1).
@@ -189,7 +260,7 @@ to `config.toml` file in your Hugo root directory and change params fields. In c
 
 ## Post archetype
 
-See the basic `post` file params supported by the theme — https://github.com/panr/hugo-theme-terminal/blob/master/archetypes/posts.md
+See the default `post` file params supported by the theme — https://github.com/panr/hugo-theme-terminal/blob/master/archetypes/posts.md
 
 ## Add-ons
 
@@ -197,39 +268,11 @@ See the basic `post` file params supported by the theme — https://github.com/p
 - **Extended Head** — please take a look at `layouts/partials/extended_head.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html
 - **Extended Footer** — please take a look at `layouts/partials/extended_footer.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html
 
-## How to (safely) edit the theme <a id="how-to-edit" />
+## How to edit the theme <a id="how-to-edit" />
 
-If you have to override only some of the styles, you can do this easily by adding `static/style.css` in your root directory and point things you want to change.
+If you are using as a remote Hugo Module (you don't have the theme files in the `theme/terminal`) and you have to override only some of the styles, you can do this easily by adding `static/style.css` in your root directory and point things you want to change.
 
-To change something directly in the theme, you have to go to `themes/terminal` and modify the files.
-
-First, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
-
-```bash
- $ cd themes/terminal
-```
-
- then run:
-
- ```bash
- $ npm install
- $ npm i yarn
- $ yarn
- ```
-
-After you modified the files you can run webpack in watch mode:
-
-```bash
-$ yarn dev
-```
-
-or rebuild theme
-
-```bash
-$ yarn build
-```
-
-To see the changes (remember to restart `hugo server`).
+If you have the theme files in the theme directory, then you can directly edit anything in the theme, you just have to go to `themes/terminal` and modify the files. No compilation step needed.
 
 ## Found a bug? <a id="bug" />
 
@@ -256,14 +299,9 @@ Sounds OK? Cool, let's rock! 🤘
 
 I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](https://github.com/panr/hugo-theme-terminal/blob/master/USERS.md)! 🤗
 
-## Sponsoring
-
-If you like my work and want to support the development of the project, now you can! Just:
-
-<a href="https://www.buymeacoffee.com/panr" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
 
 ## License
 
-Copyright © 2019-2020 Radosław Kozieł ([@panr](https://twitter.com/panr))
+Copyright © 2019-2022 Radosław Kozieł ([@panr](https://twitter.com/panr))
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.

@@ -5,17 +5,19 @@
     </div>
   {{ end }}
   <div class="posts">
-    {{ range .Pages }}
-      <div class="post on-list">
+    {{ range .Paginator.Pages }}
+      <article class="post on-list">
         <h1 class="post-title">
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
         </h1>
         <div class="post-meta">
-          <span class="post-date">
-            {{ .Date.Format "2006-01-02" }}
-          </span>
+          {{ if .Date }}
+            <time class="post-date">
+              {{ .Date.Format "2006-01-02" }} ::
+            </time>
+          {{ end }}
           {{ with .Params.Author }}
-            <span class="post-author">:: {{ . }}</span>
+            <span class="post-author">{{ . }}</span>
           {{ end }}
         </div>
 
@@ -29,30 +31,26 @@
           </span>
         {{ end }}
 
-        {{ if .Params.Cover }}
-          <img src="{{ .Params.Cover | absURL }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
-        {{ end }}
+        {{ partial "cover.html" . }}
 
         <div class="post-content">
           {{ if .Params.showFullContent }}
-          {{ .Content }}
+            {{ .Content }}
           {{ else if .Description }}
-          {{ .Description | markdownify }}
+            {{ .Description | markdownify }}
           {{ else }}
-          {{ if .Truncated }}
-          {{ .Summary }}
-          {{ end }}
+            {{ .Summary | markdownify }}
           {{ end }}
         </div>
 
         {{ if not .Params.showFullContent }}
-        <div>
-          <a class="read-more button"
-            href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
-        </div>
+          <div>
+            <a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+          </div>
         {{ end }}
-      </div>
+      </article>
     {{ end }}
+
     {{ partial "pagination.html" . }}
   </div>
 {{ end }}
