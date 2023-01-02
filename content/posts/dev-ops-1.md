@@ -8,6 +8,10 @@ draft: false
 Toc: false
 ---
 
+> 📝 *This post was initially released on the HLS Works Blog in 2020. The post was moved to this website after HLS Works closed in Sep 2021.*
+
+# Automate test execution HLS
+
 Nowadays, continuous integration (CI) is a must, and including CI in our workflow has been a game-changer. We have automated many processes to save an enormous amount of time that can be spent on improving quality and delivering a better product to our customers.
 
 To fully integrate dev-ops into our processes, we have automated test execution and code coverage report generation. Tests in HLS differ significantly from typical software development. In software development, a typical CI workflow compiles and executes tests in several different environments with distinct operating systems and configurations. In HLS, executing the software is just the beginning of the pipeline C simulation (C SIM). A software CI workflow lacks synthesis, co-simulation, and IP exportation. Checking all of these can be tedious and time-consuming, but with the help of automation and CI tools, this process becomes much easier!
@@ -44,5 +48,3 @@ Our automated system executes the pipeline described above (C simulation, synthe
 ## This Is Only the Beginning.
 
 The HLS Works operations roadmap includes much more automation, specifically in the field of deployment operations. From documentation generation and deployment to code deployment, all these topics [KA1] will be covered in a later post.
-
-> 📝 *This post was initially released on the HLS Works Blog in 2020. The post was migrated to this web after the HLS Works closed in Sep 2021. The entire pipeline is planned to be open-sourced in the the near future.*

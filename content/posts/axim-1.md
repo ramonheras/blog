@@ -8,6 +8,10 @@ draft: false
 mathjax: true
 ---
 
+> 📝 *This post was initially released on the HLS Works Blog in 2020. The post was moved to this website after HLS Works closed in Sep 2021.*
+
+# The AXI Master interface in HLS (The Basics)
+
 The AXI4 master is a powerfull interface that supports many features, but probably the most remarkable feature is support for burst transactions (Covered in detail in this post). An AXI Master (AXIM) interface is commonly used to access the DDR memory, though it can also be used to access other cores, such as BRAM or URAM. On the other side, an AXIM is complex and requires a lot of FPGA real estate. The operating frequency is also significantly reduced in comparison to different interfaces, such as the AXI stream.
 
 This post addresses the basics of designing an AXIM-powered IP core. It is written with the assumption that the reader has some knowledge regarding this interface. If you do not, I recommend watching [these videos](https://www.youtube.com/watch?v=1zw1HBsjDH8&list=PLaSdxhHqai2_7WZIhCszu5PLSbZURmibN) or reviewing the [AMBA AXI specification documentation](https://developer.arm.com/documentation/ihi0022/e/AMBA-AXI3-and-AXI4-Protocol-Specification). Throughout this post, I will be referring to the HLS documentation quite often, in particular to [UG1399-v2020.2](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_2/ug1399-vitis-hls.pdf). As I explain later on, some concepts in the documentation are not clear enough, in my opinion.

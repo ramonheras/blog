@@ -8,6 +8,9 @@ draft: false
 mathjax: true
 ---
 
+> 📝 *This post was initially released on the HLS Works Blog in 2020. The post was moved to this website after HLS Works closed in Sep 2021.*
+
+# Enabling Burst Transactions on an AXIM Interface in HLS
 
 Burst transactions are essential to take full advantage of the AXIM interface. After performing many tests and reading the documentation several times, I must say that there is not a well-defined behavior of Vitis HLS. In this post, I summarize my thoughts and experimentation results on optimizing burst transactions. You can find an introductory blog to this topic here.
 

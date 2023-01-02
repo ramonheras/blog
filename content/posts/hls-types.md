@@ -8,6 +8,10 @@ draft: false
 mathjax: true
 ---
 
+> 📝 *This post was initially released on the HLS Works Blog in 2020. The post was moved to this website after HLS Works closed in Sep 2021.*
+
+# Why use HLS data types
+
 The C/C++ language has many data types that most people are familiar with, from the basic ones, `char`, `int`, `unsigned`, and `float`, to the bit accurate std types, including `int8_t`, `int32_t`, and more. If there are so many data types to choose from, why would we even bother with new ones? What are the advantages of HLS types? How can these data types be used effectively? These questions will be answered in this post.
 
 # Types
