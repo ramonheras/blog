@@ -1,8 +1,8 @@
 ---
 title: "Automate HLS IP Core Deployment"
 date: "2021-03-01"
-tags: [Xilinx-HLS, C++, DevOps, Deployment, GitHub-Workflows]
-categories: [Xilinx High-Level Synthesis]
+tags: [Xilinx-HLS, C++, DevOps, Deployment, GitHub-Workflows, HLS Works]
+categories: [Xilinx High-Level Synthesis, HLS Works]
 author: "Ramon Heras"
 draft: false
 Toc: false

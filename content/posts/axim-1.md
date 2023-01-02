@@ -1,8 +1,8 @@
 ---
 title: "The AXI Master interface in HLS (The Basics)"
 date: "2021-05-01"
-tags: [Xilinx-HLS, AXI-Master, C++, Basics]
-categories: [Xilinx High-Level Synthesis]
+tags: [Xilinx-HLS, AXI-Master, C++, Basics, HLS Works]
+categories: [Xilinx High-Level Synthesis, HLS Works]
 author: "Ramon Heras"
 draft: false
 mathjax: true

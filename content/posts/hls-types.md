@@ -1,8 +1,8 @@
 ---
 title: "Why use HLS data types"
 date: "2021-04-01"
-tags: [Xilinx-HLS, HLS-Types, C++, ap_types]
-categories: [Xilinx High-Level Synthesis]
+tags: [Xilinx-HLS, HLS-Types, C++, ap_types, HLS Works]
+categories: [Xilinx High-Level Synthesis, HLS Works]
 author: "Ramon Heras"
 draft: false
 mathjax: true

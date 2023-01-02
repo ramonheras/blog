@@ -1,8 +1,8 @@
 ---
 title: "Automate test execution HLS"
 date: "2021-02-01"
-tags: [Xilinx-HLS, C++, DevOps, Verification, GitHub-Workflows]
-categories: [Xilinx High-Level Synthesis]
+tags: [Xilinx-HLS, C++, DevOps, Verification, GitHub-Workflows, HLS Works]
+categories: [Xilinx High-Level Synthesis, HLS Works]
 author: "Ramon Heras"
 draft: false
 Toc: false

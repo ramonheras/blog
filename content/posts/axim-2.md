@@ -1,8 +1,8 @@
 ---
 title: "Enabling Burst Transactions on an AXIM Interface in HLS"
 date: "2021-06-01"
-tags: [Xilinx-HLS, AXI-Master, C++, Burst-Transactions]
-categories: [Xilinx High-Level Synthesis]
+tags: [Xilinx-HLS, AXI-Master, C++, Burst-Transactions, HLS Works]
+categories: [Xilinx High-Level Synthesis, HLS Works]
 author: "Ramon Heras"
 draft: false
 mathjax: true
