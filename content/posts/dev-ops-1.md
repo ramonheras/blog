@@ -5,6 +5,7 @@ tags: [Xilinx-HLS, C++, DevOps, Verification, GitHub-Workflows]
 categories: [Xilinx High-Level Synthesis]
 author: "Ramon Heras"
 draft: false
+Toc: false
 ---
 
 Nowadays, continuous integration (CI) is a must, and including CI in our workflow has been a game-changer. We have automated many processes to save an enormous amount of time that can be spent on improving quality and delivering a better product to our customers.

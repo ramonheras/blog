@@ -5,6 +5,7 @@ tags: [Xilinx-HLS, C++, DevOps, Deployment, GitHub-Workflows]
 categories: [Xilinx High-Level Synthesis]
 author: "Ramon Heras"
 draft: false
+Toc: false
 ---
 
 In the last post, we introduced our new CI system and its remarkable features, such as automated testing and code coverage report generation. However, that was just the beginning step in our journey to automate most processes to save time and focus on what matters, providing better-quality code to our customers. In this second stage, we have automated the deployment process. In our case, this boils down to pushing repository changes to our customers' git server.

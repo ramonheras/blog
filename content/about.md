@@ -3,6 +3,7 @@ title: "About"
 date: "2021-09-14"
 author: "Ramon Heras"
 cover: "/images/about/avatar.PNG"
+Toc: false
 ---
 
 
