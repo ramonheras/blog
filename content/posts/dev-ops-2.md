@@ -13,7 +13,7 @@ We understand that each organization uses unique processes that do not necessari
 
 The customer owns a repository in which there is no need to run any script to read reports and documentation or import the IP core to the Vivado IP catalog. Depending on the project (for most projects), we also include the source code. Most projects involve designing custom libraries; hence, it does not make sense to export the IP core alone. Instead, we include the underlying library used to build the IP core, and, if it is requested, all related code such as external included files and tests.
 
-{{< figure src="/images/DevOps-2/pipeline.jpg" alt="Deployment Pipeline" position="center">}}
+{{< figure src="/images/dev-ops-2/pipeline.jpg" alt="Deployment Pipeline" position="center">}}
 **Figure 1** Deployment Pipeline  
 
 > 📝 *This post was initially released on the HLS Works Blog in 2020. The post was migrated to this web after the HLS Works closed in Sep 2021. The entire pipeline is planned to be open-sourced in the the near future.*

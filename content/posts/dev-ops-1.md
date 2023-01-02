@@ -35,7 +35,7 @@ Step 3 is the most time-consuming and complex. It can be split into three sub-pr
 Detecting any breaks in the pipeline at commit granularity has saved our customers a lot of time and money. Figure 1 illustrates the described flow.
 Figure 1 Test pipeline
 
-{{< figure src="/images/DevOps-1/pipeline.jpg" alt="Test pipeline" position="center">}}
+{{< figure src="/images/dev-ops-1/pipeline.jpg" alt="Test pipeline" position="center">}}
 **Figure 1** Test pipeline 
 
 Our automated system executes the pipeline described above (C simulation, synthesis, co-simulation, and IP exportation) in various Vitis HLS versions (2020.1 and 2020.2) and operating systems (Windows 10 and Ubuntu 20.04|18.4), running all tasks in parallel to improve execution times.  

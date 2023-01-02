@@ -96,10 +96,10 @@ The Xilinx arbitrary point library allows developers to use fixed-point data, bu
 
 The `ap_fixed` comes in the shape of a template type, in which the first two template arguments are the total bit width (W), and the integer width (I).  The former is the number of bits occupied by the type, and the latter is the number of bits used to represent the integer part (See figure 1). The following two arguments are also mandatory and serve to specify the overflow (O) and rounding (Q) modes (see Table 1). Xilinx states that `AP_SAT` requires extra hardware that can increase LUT utilization up to 20%. When resource utilization is not a concern, my personal preferences are `AP_SAT` (saturation) and `SC_RND_CONV` (convergent rounding). Otherwise, the default (`AP_WRAP` and `SC_TRUNC`) modes will work just fine. The last argument is optional and only makes sense when used alongside the `AP_WRAP` mode. I do not find this argument particularly useful, so I leave it set to the default value (0) or a value equal to the integer width (I). If you are unfamiliar with these overflow and rounding methods, there are examples of each method in UG1399 pages 516 to 519.
 
- {{< figure src="/images/HLS-Types/integer.jpg" alt="Fixed-Point Data Type Bits" position="center">}}
+ {{< figure src="/images/hls-types/integer.jpg" alt="Fixed-Point Data Type Bits" position="center">}}
 **Figure 1** Fixed-Point Data Type Bits
 
- {{< figure src="/images/HLS-Types/table1.jpg" alt="Fixed-Point Identifier Summary" position="center" >}}
+ {{< figure src="/images/hls-types/table1.jpg" alt="Fixed-Point Identifier Summary" position="center" >}}
 **Table 1** Fixed-Point Identifier Summary [[UG1399-Xil2020]](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_2/ug1399-vitis-hls.pdf#page=495)
 
 In Table 1, the second column (`ap_fixed` Types) lists the option aliases for C/C++, while the first column (System C Types) is for System C. Let's see some examples.
