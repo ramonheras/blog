@@ -1,5 +1,6 @@
 ---
 title: "Learning pills - Array as HLS top function parameter"
+cover : "/images/lp-array-top-param/cover.jpg"
 date: "2021-02-01" #ToDo
 tags: [Xilinx-HLS, Vitis, C++, High-Level-Synthesis, HLS Works]
 categories: [Xilinx High-Level Synthesis, HLS Works]

@@ -1,5 +1,6 @@
 ---
 title: "Learning pills - Inferring a register in Xilinx High-Level Synthesis (HLS)"
+cover: "/images/lp-infer-reg-hls/cover.jpg"
 date: "2021-02-01" #ToDo
 tags: [Xilinx-HLS, Vitis, C++, High-Level-Synthesis, HLS Works]
 categories: [Xilinx High-Level Synthesis, HLS Works]
@@ -104,7 +105,3 @@ In contrast, the synthesis report and the cosim wave view show that the register
 
 {{< figure src="/images/lp-infer-reg-hls/4_waveViewFull.jpg" alt="Test pipeline" position="center">}}
 **Figure 4** Simulation Wave View (Full)
-
-## Original Cover
-
-{{< figure src="/images/lp-infer-reg-hls/cover.jpg" alt="Test pipeline" position="center">}}
